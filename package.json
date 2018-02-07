@@ -1,0 +1,27 @@
+{
+    "name": "book-spider",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "dispatch": "latest",
+        "cheerio": "latest",
+        "co": "latest",
+        "moment": "latest",
+        "moment-timezone": "latest",
+        "mysql": "latest",
+        "mysql2": "latest",
+        "request": "latest",
+        "needle": "latest",
+        "redis": "latest",
+        "sequelize": "4.22.7",
+        "xml2js": "latest",
+        "iconv-lite": "latest",
+        "node-schedule": "latest",
+        "async": "latest",
+        "pm2": "latest",
+        "nodemailer": "latest",
+        "images": "latest",
+        "fluent-ffmpeg": "latest",
+        "fdfs": "latest"
+    }
+}
