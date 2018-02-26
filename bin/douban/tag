@@ -4,28 +4,27 @@ const dispatch = require('../../lib/dispatch');
 const sync = require('../../lib/sync');
 const work = require('../../work/douban/spider');
 
-co(function*() {
-    if (process.argv[2] && process.argv[2] == 'tag') {
-        if (process.argv[3] && process.argv[3] == '--deamon') {
+function main () {
+    co(function*() {
+        if (process.argv[2] && process.argv[2] == 'tag') {
             while(true) {
-                console.log("hhhh");
-                // yield work.fetch_tags();
-                // yield dispatch.wait(10);
+                yield work.fetch_tags();
+                yield dispatch.wait(10);
             }
-        }
-    } else if (process.argv[2] && process.argv[2] == 'books') {
-        if (process.argv[3] && process.argv[3] == '--deamon') {
+        } else if (process.argv[2] && process.argv[2] == 'books') {
             while(true) {
                 yield work.books();
                 yield dispatch.wait(10);
             }
         }
-    }
-}).then(function(result) {
-    process.exit();
-}, function(err) {
-    sync.error_exit('tag', err);
-});
+    }).then(function(result) {
+        process.exit();
+    }, function(err) {
+        sync.error_exit('tag', err);
+    });
+}
+
+main();
 
 process.on('uncaughtException', function (err) {
     sync.error_exit('tag', err);

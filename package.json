@@ -1,27 +1,28 @@
-{
-    "name": "node-spider",
-    "version": "0.0.1",
-    "private": true,
-    "dependencies": {
-        "dispatch": "latest",
-        "cheerio": "latest",
-        "co": "latest",
-        "moment": "latest",
-        "moment-timezone": "latest",
-        "mysql": "latest",
-        "mysql2": "latest",
-        "request": "latest",
-        "needle": "latest",
-        "redis": "latest",
-        "sequelize": "4.22.7",
-        "xml2js": "latest",
-        "iconv-lite": "latest",
-        "node-schedule": "latest",
-        "async": "latest",
-        "pm2": "latest",
-        "nodemailer": "latest",
-        "images": "latest",
-        "fluent-ffmpeg": "latest",
-        "fdfs": "latest"
-    }
-}
+    {
+  "name": "node-spider",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+      "async": "latest",
+      "cheerio": "latest",
+      "co": "latest",
+      "dispatch": "latest",
+      "fdfs": "latest",
+          "fluent-ffmpeg": "latest",
+          "iconv-lite": "latest",
+      "images": "latest",
+      "moment": "latest",
+          "moment-timezone": "latest",
+      "mysql": "latest",
+      "mysql2": "^1.5.2",
+      "needle": "^2.1.2",
+          "node-schedule": "latest",
+      "nodemailer": "^4.4.2",
+      "pm2": "^2.9.3",
+      "redis": "latest",
+      "request": "latest",
+      "sequelize": "4.22.7",
+      "urlencode": "^1.1.0",
+      "xml2js": "latest"
+        }
+        }
