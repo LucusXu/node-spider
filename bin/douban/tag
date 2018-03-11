@@ -12,10 +12,7 @@ function main () {
                 yield dispatch.wait(10);
             }
         } else if (process.argv[2] && process.argv[2] == 'books') {
-            while(true) {
-                yield work.books();
-                yield dispatch.wait(10);
-            }
+            yield work.fetch_books();
         }
     }).then(function(result) {
         process.exit();

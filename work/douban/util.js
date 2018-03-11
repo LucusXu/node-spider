@@ -3,6 +3,7 @@ const urlencode = require('urlencode');
 const sync = require('../../lib/sync');
 const log = require('../../lib/log');
 const string = require('../../lib/string');
+const book_tag = require('../../models/book_tag');
 const logger = new log('douban');
 const util = module.exports = {};
 
@@ -18,4 +19,13 @@ util.insertTag = function* (className, tag, sum) {
     }
     console.log(tag_info)
     let result = yield sync.create(book_tag, tag_info);
+}
+
+util.readDoubanTags = function* () {
+    let data = yield book_tag.findAll({
+        where: {
+            'site': 'douban',
+        }
+    });
+    return data;
 }
